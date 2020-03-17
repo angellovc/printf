@@ -20,9 +20,10 @@ int convert_integer(va_list list)
 int convert_double(va_list list)
 {
 	double n = 0;
+
 	int len = 0;
 
-	n = va_arg(list, int);
+	n = va_arg(list, double);
 	len = print_double(n);
 	return (len);
 }
@@ -37,6 +38,6 @@ int convert_unsigned(va_list list)
 	int len = 0;
 
 	n = va_arg(list, unsigned);
-	len = print_double(n);
+	len = print_unsigned(n);
 	return (len);
 }
