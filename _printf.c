@@ -10,22 +10,26 @@ int _printf(const char *format, ...)
 
 	va_list(list);
 	va_start(list, format);
-	for (i = 0; format != '\0' && format[i] != '\0'; i++)
+	if (format == '\0')
+	{
+		va_end(list);
+		return (-1);
+	}
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
-			 ret = find(&format[i + 1], list);
-			 if (ret != 0)
-			 {
-				 len = len + ret;
+			ret = find(&format[i + 1], list);
+			if (ret > 0)
+			{
+				len = len + ret;
 				 i = i + 1;
-			 }
-			 else
-			 {
+			}
+			else
+			{
 				 print_char(format[i]);
 				 len++;
-			 }
-
+			}
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
 		{
