@@ -12,10 +12,16 @@ int _printf(const char *format, ...)
 	va_start(list, format);
 	for (i = 0; format != '\0' && format[i] != '\0'; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] != '%')
 		{
 			len = len + find(&format[i + 1], list);
 			i = i + 1;
+		}
+		else if (format[i] == '%' && format[i + 1] == '%')
+		{
+			print_char(format[i]);
+			len++;
+			i++;
 		}
 		else
 		{
