@@ -21,6 +21,8 @@ int print_string(char *s)
 {
 	int i = 0, len = 0;
 
+	if (*s == '\0')
+		return (-2);
 	for (i = 0; s[i] != '\0'; i++)
 		len = len + print_char(s[i]);
 	return (len);
