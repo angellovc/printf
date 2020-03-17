@@ -6,7 +6,7 @@
  */
 int print_integer(int n)
 {
-	int i = 0;
+	int i = 1;
 
 	return (recursion_int(n, i));
 }
@@ -24,6 +24,7 @@ int recursion_int(int n, int cont)
 	{
 		print_char(45);
 		num = (-1) * n;
+		cont++;
 	}
 	else
 		num = n;
