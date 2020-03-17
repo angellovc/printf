@@ -19,7 +19,7 @@ int convert_integer(va_list list)
  */
 int convert_double(va_list list)
 {
-	double n = 0;
+	long int n = 0;
 	int len = 0;
 
 	n = va_arg(list, int);

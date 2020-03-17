@@ -11,8 +11,8 @@ int print_string(char *s);
 /* print numbers */
 int print_integer(int n);
 int recursion_int(int n, int cont);
-int print_double(double n);
-int recursion_double(double n, int cont);
+int print_double(long int n);
+int recursion_double(long int n, int cont);
 int print_unsigned(unsigned n);
 int recursion_unsigned(unsigned n, int cont);
 
