@@ -6,7 +6,7 @@
  */
 int print_integer(int n)
 {
-	int i = 0;
+	int i = 1;
 
 	return (recursion_int(n, i));
 }
