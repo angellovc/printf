@@ -7,16 +7,19 @@
  **/
 int find(const char *data, va_list list)
 {
-	struct_find finder[] = {
+	s_find finder[] = {
 		{"c", convert_char},
 		{"s", convert_string},
 		{"i", convert_integer},
-		{"d", convert_double}
+		{"d", convert_double},
+		{"u", convert_unsigned},
+		{"o", convert_integer},
+		{"x", convert_integer}
 	};
 	int i = 0;
 	int len = 0;
 
-	for (i = 0; i < 4; i++)
+	for (i = 0; i < 7; i++)
 		if (finder[i].type[0] == data[0])
 			len = finder[i].print(list);
 	return (len);
