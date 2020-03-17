@@ -13,8 +13,8 @@ int print_integer(int n);
 int recursion_int(int n, int cont);
 int print_double(long int n);
 int recursion_double(long int n, int cont);
-int print_unsig(unsigned n);
-int recursion_unsig(unsigned n, int cont);
+int print_unsig(unsigned int n);
+int recursion_unsig(unsigned int n, int cont);
 
 
 /* convert list to printeable ascii */
