@@ -4,7 +4,7 @@
  *@n: number to print
  *Return: lenght of the number
  */
-int print_double(double n)
+int print_double(long int n)
 {
 	int i = 0;
 
@@ -16,9 +16,9 @@ int print_double(double n)
  *@cont: count the lenght of number
  *Return: Amount of digits of the number n
  */
-int recursion_double(double n, int cont)
+int recursion_double(long int n, int cont)
 {
-	unsigned int num;
+	unsigned long int num;
 
 	if (n < 0)
 	{
