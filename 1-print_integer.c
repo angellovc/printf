@@ -24,6 +24,7 @@ int recursion_int(int n, int cont)
 	{
 		print_char(45);
 		num = (-1) * n;
+		cont++;
 	}
 	else
 		num = n;
