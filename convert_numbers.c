@@ -37,6 +37,6 @@ int convert_unsigned(va_list list)
 	int len = 0;
 
 	n = va_arg(list, unsigned);
-	len = print_double(n);
+	len = print_unsigned(n);
 	return (len);
 }
