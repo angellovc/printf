@@ -8,26 +8,27 @@ int _printf(const char *format, ...)
 {
 	int i = 0, len = 0, ret = 0;
 	va_list(list);
-
-	if (format == '\0')
-		return (-1);
 	va_start(list, format);
+	if (format == '\0')
+	{
+		va_end(list);
+		return (-1);
+	}
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
-			 ret = find(&format[i + 1], list);
-			 if (ret != 0)
-			 {
-				 len = len + ret;
+			ret = find(&format[i + 1], list);
+			if (ret > 0)
+			{
+				len = len + ret;
 				 i = i + 1;
-			 }
-			 else
-			 {
+			}
+			else
+			{
 				 print_char(format[i]);
 				 len++;
-			 }
-
+			}
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
 		{
