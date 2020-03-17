@@ -12,7 +12,7 @@ int find(const char *data, va_list list)
 		{"s", convert_string},
 		{"i", convert_integer},
 		{"d", convert_double},
-		{"u", convert_unsigned},
+		{"u", convert_unsig},
 		{"o", convert_integer},
 		{"x", convert_integer}
 	};
