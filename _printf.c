@@ -7,6 +7,7 @@
 int _printf(const char *format, ...)
 {
 	int i = 0, len = 0, ret = 0;
+
 	va_list(list);
 	va_start(list, format);
 	if (format == '\0')
@@ -19,7 +20,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1] != '%')
 		{
 			ret = find(&format[i + 1], list);
-			if (ret > 0)
+			if (ret != 0)
 			{
 				len = len + ret;
 				 i = i + 1;
@@ -29,18 +30,16 @@ int _printf(const char *format, ...)
 				 print_char(format[i]);
 				 len++;
 			}
+			if (ret == -2)
+				len = len + 2;
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
 		{
-			print_char(format[i]);
-			len++;
+			len = len + print_char(format[i]);
 			i++;
 		}
 		else
-		{
-			print_char(format[i]);
-			len++;
-		}
+			len = len + print_char(format[i]);
 	}
 	va_end(list);
 	return (len);
