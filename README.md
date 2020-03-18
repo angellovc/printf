@@ -1,6 +1,6 @@
 # C Printf Project
 
-**_printf()** is a project based on the famous printf function that
+_printf() is a project based on the famous printf function that
 you can find in C lenguaje.
 ---
 - Format data types
@@ -12,7 +12,7 @@ you can find in C lenguaje.
 ### Important information
 Type command below to learn how to use it:
 ```sh
-$ man _printf
+$ man ./man_3_printf
 ```
 # FIles
 Those are the files that you can find into this projects
