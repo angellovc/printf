@@ -1,7 +1,9 @@
 # C Printf Project
 
+
 **_printf()** is a project based on the famous printf function that
 you can find in C lenguage.
+
 ---
 - Format data types
 - Print data types like:
@@ -12,7 +14,7 @@ you can find in C lenguage.
 ### Important information
 Type command below to learn how to use it:
 ```sh
-$ man _printf
+$ man ./man_3_printf
 ```
 # FIles
 Those are the files that you can find into this projects
@@ -30,7 +32,9 @@ Those are the files that you can find into this projects
 | **holberton.h** | header file |
 | **man_3_printf** | _printf manual |
 
-
+## Flowcharts
+![Image description](pf.jpg)
+![Image description](Prinf.jpg)
 ### Authors
 
  - angellovc
