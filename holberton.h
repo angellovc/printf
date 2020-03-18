@@ -15,7 +15,7 @@ int print_double(long int n);
 int recursion_double(long int n, int cont);
 int print_unsig(unsigned int n);
 int recursion_unsig(unsigned int n, int cont);
-
+void rev_string(char *s);
 
 /* convert list to printeable ascii */
 int convert_char(va_list list);
