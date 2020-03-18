@@ -19,25 +19,24 @@ int convert_integer(va_list list)
  */
 int convert_double(va_list list)
 {
-	double n = 0;
-
+	long int n = 0;
 	int len = 0;
 
-	n = va_arg(list, double);
+	n = va_arg(list, int);
 	len = print_double(n);
 	return (len);
 }
 /**
- *convert_unsigned - store list arguments into a int variable
+ *convert_unsig - store list arguments into a int variable
  *@list: arguments
  *Return: lenght of the integer
  */
-int convert_unsigned(va_list list)
+int convert_unsig(va_list list)
 {
-	unsigned n = 0;
+	unsigned int n = 0;
 	int len = 0;
 
-	n = va_arg(list, unsigned);
-	len = print_unsigned(n);
+	n = va_arg(list, unsigned int);
+	len = print_unsig(n);
 	return (len);
 }
