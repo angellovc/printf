@@ -14,7 +14,7 @@ If it returns successfully, _printf returns the number of characters printed
 In case of any error, _printf will return a negative value.
 
 .SS Format of the format string
-The arguments must correspond properly with the conversion specifier.
+The arguments must correspond properly with the conversion directive
 Each conversion specification is indicated by the
 character %, it ends with a conversion specifier.
 
@@ -28,13 +28,29 @@ it is replaced by the correponding argument value
 .TP
 %s
 It is replaced by the corresponding argument value (but not including)
-a terminating null byte '\0'; the array must contain a terminating null byte.
+a terminating null byte '\0'.
 .TP
 %d, %i The int argument is converted to signed decimal notation.
+.TP
+%b the int argument is converted to binary.
+
+.SH EXAMPLES
+.TP
+to print an integer assign to a int varaible var (you can use %i or %d)
+_printf("Integer %i", var);
+.TP
+to print a decimal number in binary (int dec = 348)
+_printf("348 in binary is %b", dec);
+.TP
+to print a char store in a variable ch
+_printf("Char %c", ch);
+.TP
+to print a string
+_printf("String %s", "Hello, world!");
 
 .SH SEE ALSO
 .I man 3 printf
-.SH BUGS
+.SH REPORTING BUGS
 Report to https://github.com/ikki2530/printf/
 .SH AUTHOR
 Angello Villegas and Diego Gómez
