@@ -26,6 +26,8 @@ int convert_double(va_list list);
 int convert_unsig(va_list list);
 int convert_binary(va_list list);
 
+/* reverse a string*/
+void rev_string(char *s);
 
 int find(const char *data, va_list list);
 

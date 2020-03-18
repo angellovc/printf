@@ -15,7 +15,8 @@ int find(const char *data, va_list list)
 		{"b", convert_binary},
 		{"u", convert_unsig},
 		{"o", convert_integer},
-		{"x", convert_integer}
+		{"x", convert_integer},
+		{"b", convert_binary}
 	};
 	int i = 0;
 	int len = 0;
