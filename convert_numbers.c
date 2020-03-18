@@ -43,7 +43,7 @@ int convert_unsig(va_list list)
 }
 /**
  * convert_binary - convert form decimal to binary
- * @dec: decimal number
+ * @list: decimal number
  * Return: Always 0
  */
 int convert_binary(va_list list)
