@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 /**
  *convert_integer - store list arguments into a int variable
  *@list: arguments
@@ -39,4 +40,34 @@ int convert_unsig(va_list list)
 	n = va_arg(list, unsigned int);
 	len = print_unsig(n);
 	return (len);
+}
+/**
+ * convert_binary - convert form decimal to binary
+ * @dec: decimal number
+ * Return: Always 0
+ */
+int convert_binary(va_list list)
+{
+	int res, i = 0, dec, dec2, lg = 0;
+	char *p;
+
+	dec = va_arg(list, int);
+	dec2 = dec;
+	while (dec2 != 0)
+	{
+		dec2 = dec2 / 2;
+		lg++;
+	}
+	p = malloc(lg + 1);
+	while (dec != 0)
+	{
+		res = (dec % 2);
+		p[i] = res + '0';
+		dec = dec / 2;
+		i++;
+	}
+	rev_string(p);
+	print_string(p);
+	free(p);
+	return (i);
 }
