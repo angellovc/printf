@@ -27,7 +27,9 @@ Those are the files that you can find into this projects
 | **0-print_ascii.c** | This file contains two functions: one for print individual characters and the other to print strings. |
 | **holberton.h** | header file |
 
-
+## Flowcharts
+![Image description](pf.jpg)
+![Image description](Prinf.jpg)
 ### Authors
 
  - angellovc
