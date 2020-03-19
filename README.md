@@ -2,6 +2,7 @@
 
 _printf() is a project based on the famous printf function that
 you can find in C lenguaje.
+
 ---
 - Format data types
 - Print data types like:
